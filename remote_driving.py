@@ -129,7 +129,6 @@ def IsNearObstacle(localHowNear):
     else:
         return False
 
-
 # Move back a little, then turn right
 def AvoidObstacle():
     # Back off a little
@@ -158,23 +157,33 @@ try:
     while True:
         key_input = getch.getche()
         if key_input == 'w':
+            print('Going Forward')
             Forwards()
             time.sleep(ActionRunTime)
+            print('Stop Motor')
             StopMotors()
+
 
         if key_input == 'd':
+            print('Going Right')
             Right()
             time.sleep(ActionRunTime)
+            print('Stop Motor')
             StopMotors()
+
 
         if key_input == 'a':
+            print('Going Left')
             Left()
             time.sleep(ActionRunTime)
+            print('Stop Motor')
             StopMotors()
 
-        if key_input == 'w':
+        if key_input == 's':
+            print('Going Backward')
             Backwards()
             time.sleep(ActionRunTime)
+            print('Stop Motor')
             StopMotors()
 
         if IsNearObstacle(HowNear):
