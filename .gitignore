@@ -63,3 +63,7 @@ celerybeat-schedule
 
 # mjpg
 /mjpg
+
+# PyCharm
+/.idea
+
